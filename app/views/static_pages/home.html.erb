@@ -1,1 +1,551 @@
 <% provide(:title, "Quiz") %>
+<div class="jumbotron fade in">
+
+    <!-- trying out the carousel as a header -->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <%= image_tag("forest-heli.jpg", alt:"Forest Helicopter") %>
+                <div class="carousel-caption">
+                    <h1>Do you need a PLB?</h1>
+                </div>
+            </div>
+            <div class="item">
+                <%= image_tag("rescue-boat.jpg", alt:"Rescue Boat") %>
+                <div class="carousel-caption">
+                    <h1>Do you need a PLB?</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <h2><small>Call for rescue when you need it most!</small></h2>
+    <p>A PLB is a handheld electronic device that calls for search and rescue assistance when activated.</p>
+    <p>Nearly 40,000 people worldwide have been rescued since the introduction of this lifesaving technology in 1982.  These beacons are small and cheap enough for anyone to use.
+        Get a PLB for your best chance of rescue in a backcountry emergency.
+    <ul>
+        <li>Are you confused about the difference between PLBs, EPIRBs, or ELTs?</li>
+        <li>Are you confused about the pros and cons of the different global satellite networks: Cospas-Sarsat, Iridium, and Globalstar?</li>
+        <li>Are you questioning whether to spend hundreds of dollars on another piece of outdoor gear?</li>
+    </ul>
+    <p>I've created this site to help you:</p>
+    <ul>
+        <li>Decide if a PLB is worth the cost</li>
+        <li>Choose a device for your needs</li>
+    </ul>
+    <div style="text-align:center;">
+    <p>Take the 5 question outdoor activity quiz now:</p>
+    <button class="btn btn-lg btn-primary" id="start">Start the Quiz »</button>
+    </div>
+</div>
+<div class="jumbotron fade hidden" id="quiz">
+    <div id="firstQuestion" class="questionContainer fade in" data-name="q1">
+        <h3>Question 1/5</h3>
+        <div class="well">
+        <p>You are looking for:</p>
+        <div class="btn-group-vertical" data-toggle="buttons">
+            <label class="btn btn-primary"><input type="radio" name="q1" value="choice1" autocomplete="off">A handheld device that will be activated manually in an emergency.</label>
+            <label class="btn btn-primary"><input type="radio" name="q1" value="choice2" autocomplete="off">Device mounted to a boat that activates automatically in an emergency.</label>
+            <label class="btn btn-primary"><input type="radio" name="q1" value="choice3" autocomplete="off">Device mounted to a plane that activates automatically in an emergency.</label>
+        </div>
+
+        <div class="row" style="margin-top: 10px;">
+            <div class="col-md-5"></div>
+            <div class="col-md-2"><button type="button" class="btn btn-success btn-block next">Next</button></div>
+            <div class="col-md-5"></div>
+        </div>
+
+        </div>
+    </div>
+
+    <div class="questionContainer hidden fade" data-name="q2">
+        <h3>Question 2/5</h3>
+        <div class="well">
+            <p>How many people are you traveling with?</p>
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary"><input type="radio" name="q2" value="0" autocomplete="off">0-2</label>
+                <label class="btn btn-primary"><input type="radio" name="q2" value="1" autocomplete="off">3-5</label>
+                <label class="btn btn-primary"><input type="radio" name="q2" value="2" autocomplete="off">6+</label>
+            </div>
+
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-md-4"></div>
+                <div class="col-xs-6 col-md-2"><button type="button" class="btn btn-success btn-block previous">Previous</button></div>
+                <div class="col-xs-6 col-md-2"><button type="button" class="btn btn-success btn-block next">Next</button></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="questionContainer hidden fade" data-name="q3">
+        <h3>Question 3/5</h3>
+        <div class="well">
+            <p>How many days will you be in a remote area (no cell service)?</p>
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary"><input type="radio" name="q3" value="3" autocomplete="off">0 (will have service)</label>
+                <label class="btn btn-primary"><input type="radio" name="q3" value="4" autocomplete="off">1-4</label>
+                <label class="btn btn-primary"><input type="radio" name="q3" value="5" autocomplete="off">5+</label>
+            </div>
+
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-md-4"></div>
+                <div class="col-xs-6 col-md-2"><button type="button" class="btn btn-success btn-block previous">Previous</button></div>
+                <div class="col-xs-6 col-md-2"><button type="button" class="btn btn-success btn-block next">Next</button></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="questionContainer hidden fade" data-name="q4">
+        <h3>Question 4/5</h3>
+        <div class="well">
+            <p>Will you be traveling to these areas:</p>
+                <ul class="list-unstyled">
+                    <li>Sub-Saharan Africa</li>
+                    <li>Polar regions (beyond the Arctic/Antarctic Circle)</li>
+                    <li>Southern tip of South America</li>
+                    <li>India</li>
+                </ul>
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary"><input type="radio" name="q4" value="6" autocomplete="off">Yes</label>
+                <label class="btn btn-primary"><input type="radio" name="q4" value="7" autocomplete="off">No</label>
+            </div>
+
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-md-4"></div>
+                <div class="col-xs-6 col-md-2"><button type="button" class="btn btn-success btn-block previous">Previous</button></div>
+                <div class="col-xs-6 col-md-2"><button type="button" class="btn btn-success btn-block next">Next</button></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="questionContainer hidden fade" data-name="q5">
+        <h3>Question 5/5</h3>
+        <div class="well">
+            <p>Chose for each question:</p>
+
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-xs-12 col-md-4" style="text-align:center;">
+                    I am OK paying for a monthly data subscription:
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary"><input type="radio" name="q5a" value="8" autocomplete="off">Yes</label>
+                        <label class="btn btn-primary active"><input type="radio" name="q5a" value="9" autocomplete="off" checked>Not Sure</label>
+                        <label class="btn btn-primary"><input type="radio" name="q5a" value="10" autocomplete="off">No</label>
+                    </div>
+                 </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-xs-12 col-md-4" style="text-align:center;">
+                    I need two-way messaging features:
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary"><input type="radio" name="q5b" value="11" autocomplete="off">Yes</label>
+                        <label class="btn btn-primary active"><input type="radio" name="q5b" value="12" autocomplete="off" checked>Not Sure</label>
+                        <label class="btn btn-primary"><input type="radio" name="q5b" value="13" autocomplete="off">No</label>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-xs-12 col-md-4" style="text-align:center;">
+                    I need a lightweight device:
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary"><input type="radio" name="q5c" value="14" autocomplete="off">Yes</label>
+                        <label class="btn btn-primary active"><input type="radio" name="q5c" value="15" autocomplete="off" checked>Not Sure</label>
+                        <label class="btn btn-primary"><input type="radio" name="q5c" value="16" autocomplete="off">No</label>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-xs-12 col-md-4" style="text-align:center;">
+                    I'm willing to pay over $200:
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary"><input type="radio" name="q5d" value="17" autocomplete="off">Yes</label>
+                        <label class="btn btn-primary active"><input type="radio" name="q5d" value="18" autocomplete="off" checked>Not Sure</label>
+                        <label class="btn btn-primary"><input type="radio" name="q5d" value="19" autocomplete="off">No</label>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-xs-12 col-md-4" style="text-align:center;">
+                    The device should float:
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary"><input type="radio" name="q5e" value="20" autocomplete="off">Yes</label>
+                        <label class="btn btn-primary active"><input type="radio" name="q5e" value="21" autocomplete="off" checked>Not Sure</label>
+                        <label class="btn btn-primary"><input type="radio" name="q5e" value="22" autocomplete="off">No</label>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-xs-12 col-md-4" style="text-align:center;">
+                    I need on-screen navigation and tracking:
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary"><input type="radio" name="q5f" value="23" autocomplete="off">Yes</label>
+                        <label class="btn btn-primary active"><input type="radio" name="q5f" value="24" autocomplete="off" checked>Not Sure</label>
+                        <label class="btn btn-primary"><input type="radio" name="q5f" value="25" autocomplete="off">No</label>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-md-4"></div>
+                <div class="col-xs-6 col-md-2"><button type="button" class="btn btn-success btn-block previous">Previous</button></div>
+                <div class="col-xs-6 col-md-2"><button type="button" class="btn btn-success btn-block finish">Finish »</button></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="notice" class="hidden">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 alert alert-warning">Please choose an option.</div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <div id="result-epirb" class="result hidden fade">
+        <h2>You do not need a PLB <small>But maybe an EPIRB</small></h2>
+        <p>If you are looking for a device that will attach to a boat and be registered with a vessel, you are looking for an EPIRB (<strong>E</strong>mergency <strong>P</strong>osition <strong>I</strong>ndicating <strong>R</strong>adio <strong>B</strong>eacon).  Try visiting <a href="http://www.epirb.com/">this page</a> for more information.</p>
+        <button type="button" class="btn btn-default again">Start Again</button>
+    </div>
+    <div id="result-elt" class="result hidden fade">
+        <h2>You do not need a PLB <small>But maybe an ELT</small></h2>
+        <p>If you are looking for a device that will attach to a plane, you are looking for an ELT (<strong>E</strong>mergency <strong>L</strong>ocator <strong>T</strong>ransmitter).  Try the <a href="https://www.acrartex.com/products#1125">ACR Artex Page</a> for more information.</p>
+        <button type="button" class="btn btn-default again">Start Again</button>
+    </div>
+
+    <div id="result-plb" class="result hidden fade">
+        <h2 id="recommendationHeadline">You should get a PLB!  Check out these recommendations:</h2>
+        <button type="button" class="btn btn-primary again" style="margin-bottom: 5px;">Start Again</button>
+
+        <div class="row" style="margin-bottom: 5px;">
+            <button id="score-explain" style="margin-bottom: 5px;" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#score-expl" aria-controls="score-expl" aria-expanded="false">Explain Scoring</button>
+            <div class="collapse" id="score-expl">
+                <div class="well" style="text-align: left;">
+                    <p>Each answer chosen in the quiz contributes to the score for each device. The breakdown is:</p>
+                    <ul>
+                        <li>Group size: 0-10 points</li>
+                        <li>Length of trip: 0-10 points</li>
+                        <li>Traveling out of Globalstar service: -20 to +20 points</li>
+                        <li>Paying for monthly subscription: -10 to +10 points</li>
+                        <li>Two-way messaging: 0-10 points</li>
+                        <li>Device weight: 0-10 points</li>
+                        <li>Cost over $200: -5 to +10 points</li>
+                        <li>Floats: 0-10 points</li>
+                        <li>On-screen navigation and tracking: 0-10 points</li>
+                    </ul>
+                    <p>The total score results in a match between 0 and 100%</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommendedBox well" data-name="acr1">
+            <div class="row">
+            <div class="col-md-3">
+            <!-- Copied from amazon affiliates page: not blocked by adblock -->
+                <a target="_blank" href="http://www.amazon.com/gp/product/B005E1OU1A/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B005E1OU1A&linkCode=as2&tag=dinap02-20&linkId=BKXZJURCB5SQYROS"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B005E1OU1A&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=dinap02-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B005E1OU1A" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+            </div>
+
+            <div class="aboutDevice col-md-9">
+                <h3>ACR ResQLink</h3>
+                <h4>Your match: <span class="match">85</span>%</h4>
+                <ul class="deviceMatchList"></ul>
+                <ul class="deviceUnmatchList"></ul>
+                <p>Pros:</p>
+                <ul>
+                    <li>Your best chance of rescue: most powerful 5W transmitter and satellite network with best reputation (Cospas-Sarsat, <a href="satnetworks.html">read more</a>)</li>
+                    <li>Weight of only 4.6oz.  Very small: 1.9 x 3.9 x 1.3 in. Size of thick deck of cards.</li>
+                    <li>No annual fee</li>
+                    <li>Battery lasts 5 years</li>
+                </ul>
+                <p>Cons:</p>
+                <ul>
+                    <li>No two-way messaging ability.  Limited capability for non-emergency messages, see <a href="http://406link.com">406link.com</a></li>
+                    <li>Does not float: consider the ACR ResQLink+</li>
+                </ul>
+                <div class="well">
+                    <p>Available from:</p>
+                    <p><a target="_blank" href="http://www.amazon.com/gp/product/B005E1OU1A/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B005E1OU1A&linkCode=as2&tag=dinap02-20&linkId=TGCXEKZTHURQZMZM">Amazon</a> for $271.75 w/prime shipping.<img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B005E1OU1A" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+                    <p><a target="_blank" href="http://www.rei.com/product/815753/acr-electronics-resqlink-406-gps-personal-locator-beacon">REI</a> $280.00 w/free shipping</p>
+                </div>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#acr1-desc" aria-controls="acr1-desc" aria-expanded="false">Click for full description</button>
+                <div class="collapse" id="acr1-desc">
+                    <div class="well">
+                Want a dead simple device (there are two buttons on the case: Test and Power) that provides the maximum chance of being rescued?  This is an excellent choice.
+                    The powerful 5W signal punches through forest or other overhead obstruction and links to the Cospas-Sarsat network with full global coverage.  To date, almost 40,000
+                    people have been rescued using devices on this network.  What it lacks in features (no messaging of any kind) it makes up for in rugged design and small size.
+                    <br/>
+                    <br/>
+                    If you're looking for a floating version consider the ACR ResQLink+.
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="recommendedBox well" data-name="acr2">
+            <div class="row">
+            <div class="col-md-3">
+                <!-- Copied from amazon affiliates page: not blocked by adblock -->
+                <a target="_blank" href="http://www.amazon.com/gp/product/B006JXY0CQ/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B006JXY0CQ&linkCode=as2&tag=dinap02-20&linkId=TS2HYUPN3GJ3NMSL"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B006JXY0CQ&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=dinap02-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B006JXY0CQ" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+            </div>
+
+            <div class="aboutDevice col-md-9">
+                <h3>ACR ResQLink+ (Floating Version)</h3>
+                <h4>Your match: <span class="match">85</span>%</h4>
+                <ul class="deviceMatchList"></ul>
+                <ul class="deviceUnmatchList"></ul>
+                <p>Pros:</p>
+                <ul>
+                    <li>Like the ACR ResQLink, this provides your best chance of rescue: most powerful 5W transmitter and satellite network with best reputation (Cospas-Sarsat, <a href="satnetworks.html">read more</a>)</li>
+                    <li>No annual fee</li>
+                    <li>Battery lasts 5 years</li>
+                    <li>Flotation built into the case</li>
+                </ul>
+                <p>Cons:</p>
+                <ul>
+                    <li>Slightly heavier and larger than the ACR ResQLink: 5.4oz, 1.6 x 1.9 x 4.5 in.</li>
+                    <li>No two-way messaging ability.  Limited capability for non-emergency messages, see <a href="http://406link.com">406link.com</a></li>
+                </ul>
+                <div class="well">
+                    <p>Available from:</p>
+                    <p><a target="_blank" href="http://www.amazon.com/gp/product/B006JXY0CQ/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B006JXY0CQ&linkCode=as2&tag=dinap02-20&linkId=OZXABKS4JGUVYOUC">Amazon</a> $259.00 w/prime shipping<img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B006JXY0CQ" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+                    <p><a target="_blank" href="http://www.rei.com/product/843146/acr-electronics-resqlink-gps-personal-locator-beacon">REI</a> $289.00 w/free shipping</p>
+                </div>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#acr2-desc" aria-controls="acr2-desc" aria-expanded="false">Click for full description</button>
+                <div class="collapse" id="acr2-desc">
+                    <div class="well">
+                        Want a dead simple device (there are two buttons on the case: Test and Power) that provides the maximum chance of being rescued?  This is an excellent choice.
+                        The powerful 5W signal punches through forest or other overhead obstruction and links to the Cospas-Sarsat network with full global coverage.  To date, almost 40,000
+                        people have been rescued using devices on this network.  What it lacks in features (no messaging of any kind) it makes up for in rugged design and small size.
+                    <br/>
+                    <br/>
+                    If you're looking for a slightly smaller version that does not float, consider the ACR ResQLink.
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="recommendedBox well" data-name="fast">
+            <div class="row">
+            <div class="col-md-3">
+            <!-- Copied from amazon affiliates page: not blocked by adblock -->
+                <a target="_blank" href="http://www.amazon.com/gp/product/B008M64COO/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B008M64COO&linkCode=as2&tag=dinap02-20&linkId=XN5VOLOGW4MLETND"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B008M64COO&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=dinap02-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B008M64COO" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+            </div>
+
+            <div class="aboutDevice col-md-9">
+                <h3>McMurdo FastFind 220 PLB</h3>
+                <h4>Your match: <span class="match">85</span>%</h4>
+                <ul class="deviceMatchList"></ul>
+                <ul class="deviceUnmatchList"></ul>
+                <p>Pros:</p>
+                <ul>
+                    <li>Like the ACR models, this provides your best chance of rescue: most powerful 5W transmitter and satellite network with best reputation (Cospas-Sarsat, <a href="satnetworks.html">read more</a>).</li>
+                    <li>No annual fee.</li>
+                    <li>Battery lasts 6 years.</li>
+                    <li>Cheaper than ACR devices.</li>
+                </ul>
+                <p>Cons:</p>
+                <ul>
+                    <li>Heavier and larger than others: 8oz, 5 x 5 x 3 in.</li>
+                    <li>No two-way messaging ability.</li>
+                    <li>Does not float, but case included.</li>
+                </ul>
+                <div class="well">
+                    <p>Available from:</p>
+                    <p><a target="_blank" href="http://www.amazon.com/gp/product/B008M64COO/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B008M64COO&linkCode=as2&tag=dinap02-20&linkId=DII7FFLTAINWYIIV">Amazon</a> for $172.00, w/prime shipping<img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B008M64COO" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+                </div>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#fast-desc" aria-controls="fast-desc" aria-expanded="false">Click for full description</button>
+                <div class="collapse" id="fast-desc">
+                    <div class="well">
+                    This is a dead simple device: test button on the outside and a covered power button inside.  The powerful 5W transmission punches the signal through obstructions and links to the Cospas-Sarsat
+                    satellite network with full global coverage.  Nearly 40,000 people have been rescued from devices on this network.
+                    <br />
+                    <br />
+                    Are there any downsides compared to the ACR devices?  It is just under twice the weight of the ACR ResQLink and has larger dimensions.  It is also less popular: comparing Amazon reviews, this has about 20 to almost 150 for the ACR ResQLink.
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="recommendedBox well" data-name="spot">
+            <div class="row">
+            <div class="col-md-3">
+            <!-- Copied from amazon affiliates page: not blocked by adblock -->
+                <a target="_blank" href="http://www.amazon.com/gp/product/B00C8S8S4W/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00C8S8S4W&linkCode=as2&tag=dinap02-20&linkId=IBRUCOZZO7I6H3MM"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00C8S8S4W&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=dinap02-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B00C8S8S4W" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+            </div>
+
+            <div class="aboutDevice col-md-9">
+                <h3>Spot Gen 3 Satellite Messenger</h3>
+                <h4>Your match: <span class="match">85</span>%</h4>
+                <ul class="deviceMatchList"></ul>
+                <ul class="deviceUnmatchList"></ul>
+                <p>Pros:</p>
+                <ul>
+                    <li>Ability to send OK messages to family/friends.</li>
+                    <li>Longer battery life than DeLorme devices (150 hours).</li>
+                    <li>Weighs just 4oz. 1 x 2.5 x 3.5 inches.</li>
+                    <li>The cheapest option.</li>
+                </ul>
+                <p>Cons:</p>
+                <ul>
+                    <li>Most limited satellite network (see coverage map <a href="http://findmespot.com/coverage">here</a>)</li>
+                    <li>Minimum $150 annual subscription (device will not work without subscription!)</li>
+                    <li>Extra case needed for flotation ($20)</li>
+                    <li>Lithium batteries have varied life (est. 150 hours when using tracking functions).</li>
+                </ul>
+                <div class="well">
+                    <p>Available from:</p>
+                    <p><a target="_blank" href="http://www.amazon.com/gp/product/B00C8S8S4W/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00C8S8S4W&linkCode=as2&tag=dinap02-20&linkId=XIXRPJEFC47NQ7UW">Amazon</a> for $139.95, w/prime shipping<img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B00C8S8S4W" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+                    <p><a target="_blank" href="http://www.rei.com/product/860469/spot-gen3-satellite-gps-messenger">REI</a> $149.95 w/free shipping</p>
+                </div>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#spot-desc" aria-controls="spot-desc" aria-expanded="false">Click for full description</button>
+                <div class="collapse" id="spot-desc">
+                    <div class="well">
+                    SPOT was one of the original companies providing satellite messaging devices starting in 2007.  This device is small, lightweight, and has the ability to send pre-written OK messages
+                    to family and friends, as well as publish your location so they can track your movements on Google Maps.
+                    <br/>
+                    <br/>
+                    This is the cheapest device listed here, and that comes with downsides.  The satellite network has the worst coverage, with weak spots in parts of Africa, South America, the polar regions and the oceans.  Keep in mind you'll have to pay
+                    for a subscription to use this device--so you may be saving less than you think.
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="recommendedBox well" data-name="del1">
+            <div class="row">
+            <div class="col-md-3">
+             <!-- Copied from amazon affiliates page: not blocked by adblock -->
+                <a target="_blank" href="http://www.amazon.com/gp/product/B00BX7TJ2O/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00BX7TJ2O&linkCode=as2&tag=dinap02-20&linkId=AYCV6LGT5ENLTSZE"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00BX7TJ2O&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=dinap02-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B00BX7TJ2O" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+            </div>
+
+            <div class="aboutDevice col-md-9">
+                <h3>DeLorme inReach SE</h3>
+                <h4>Your match: <span class="match">85</span>%</h4>
+                <ul class="deviceMatchList"></ul>
+                <ul class="deviceUnmatchList"></ul>
+                <p>Pros:</p>
+                <ul>
+                    <li>Full two way messaging capability (and cell phone integration)</li>
+                    <li>Iridium Satellite network is truly global (<a href="satnetworks.html">read more</a>)</li>
+                </ul>
+                <p>Cons:</p>
+                <ul>
+                    <li>Requires subscription, but month by month option is available. (device will not work without subscription!)</li>
+                    <li>Extra case needed for flotation ($20)</li>
+                    <li>Lithium batteries have varied life (est. 100 hours when using tracking functions).</li>
+                    <li>Heavier and larger than other options: 7oz, 2.4 x 1 x 5.8 inches</li>
+                </ul>
+                <div class="well">
+                    <p>Available from:</p>
+                    <p><a target="_blank" href="http://www.amazon.com/gp/product/B00BX7TJ2O/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00BX7TJ2O&linkCode=as2&tag=dinap02-20&linkId=YGHR6E7RDMXYE5WX">Amazon</a> for $292.00 w/prime shipping<img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B00BX7TJ2O" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+                    <p><a target="_blank" href="http://www.rei.com/product/857610/delorme-inreach-se-2-way-satellite-communicator">REI</a> $299.95 w/free shipping</p>
+                </div>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#del1-desc" aria-controls="del1-desc" aria-expanded="false">Click for full description</button>
+                <div class="collapse" id="del1-desc">
+                    <div class="well">
+                    The DeLorme inReach devices are the most feature rich available (and the most expensive).  They feature fully functional two way messaging, tracking and SOS functionality.  By connecting to a cell phone, you can send and receive texts, emails and other updates anywhere in the world.
+                    <br/>
+                    <br/>
+                    The downsides for all this functionality are cost and complexity.  The high cost of the device also requires a monthly subscription.  The learning curve is steeper than the simple push button operation of other devices.
+                    If you also want on-screen navigation functions, consider the DeLorme inReach Explorer.
+                    </div>
+                </div>
+            </div>
+                </div>
+        </div>
+
+        <div class="recommendedBox well" data-name="del2">
+            <div class="row">
+            <div class="col-md-3">
+            <!-- Copied from amazon affiliates page: not blocked by adblock -->
+                <a target="_blank" href="http://www.amazon.com/gp/product/B00I6EY01C/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00I6EY01C&linkCode=as2&tag=dinap02-20&linkId=DE3FI3DLCEZTQJL4"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00I6EY01C&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=dinap02-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B00I6EY01C" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+            </div>
+
+            <div class="aboutDevice col-md-9">
+                <h3>DeLorme inReach Explorer</h3>
+                <h4>Your match: <span class="match">85</span>%</h4>
+                <ul class="deviceMatchList"></ul>
+                <ul class="deviceUnmatchList"></ul>
+                <p>Pros:</p>
+                <ul>
+                    <li>Full two way messaging capability (and cell phone integration)</li>
+                    <li>Iridium Satellite network is truly global (<a href="satnetworks.html">read more</a>)</li>
+                    <li>Fully fledged GPS device with navigation features.</li>
+                </ul>
+                <p>Cons:</p>
+                <ul>
+                    <li>Requires subscription, but month by month option is available. (device will not work without subscription!)</li>
+                    <li>Extra case needed for flotation ($20)</li>
+                    <li>Lithium batteries have varied life (est. 100 hours when using tracking functions).</li>
+                    <li>Heavier and larger than other options: 7oz, 2.4 x 1 x 5.9 inches</li>
+                    <li>The most expensive option.  If you don't need the navigation features (plotting route ahead of time, tracking on screen) consider the DeLorme SE</li>
+                </ul>
+                <div class="well">
+                    <p>Available from:</p>
+                    <p><a target="_blank" href="http://www.amazon.com/gp/product/B00I6EY01C/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00I6EY01C&linkCode=as2&tag=dinap02-20&linkId=EAW4MXEM3GY7X7RF">Amazon</a> for $359.00 w/prime shipping<img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B00I6EY01C" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+                    <p><a target="_blank" href="http://www.rei.com/product/877499/delorme-inreach-explorer-satellite-messenger">REI</a> $379.95 w/free shipping</p>
+                </div>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#del2-desc" aria-controls="del2-desc" aria-expanded="false">Click for full description</button>
+                <div class="collapse" id="del2-desc">
+                    <div class="well">
+                    The DeLorme inReach devices are the most feature rich available (and the most expensive).  They feature fully functional two way messaging, tracking and SOS functionality.  By connecting to a cell phone, you can send and receive texts, emails and other updates anywhere in the world.
+                    <br/>
+                    <br/>
+                    The downsides for all this functionality are cost and complexity.  The high cost of the device also requires a monthly subscription.  The learning curve is steeper than the simple push button operation of other devices.
+                    If don't need on-screen navigation, save money and consider the DeLorme inReach SE.
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="row hidden" id="affiliate">
+            doineedaplb.com is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to amazon.com
+        </div>
+    </div>
+</div>
+

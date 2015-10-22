@@ -13,11 +13,11 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav">
-              <li><%= link_to "Take the Quiz",            root_path        %></li>
-              <li><%= link_to "PLB Satellite Networks",   satnetworks_path %></li>
-              <li><%= link_to "Product Comparison Table", comptable_path   %></li>
-              <li><%= link_to "Rescues",                  rescues_path     %></li>
-              <li><%= link_to "Who made this?",           whowhy_path      %></li>
+              <li class="<%= active_class(root_path)        %>"><%= link_to "Take the Quiz",            root_path        %></li>
+              <li class="<%= active_class(satnetworks_path) %>"><%= link_to "PLB Satellite Networks",   satnetworks_path %></li>
+              <li class="<%= active_class(comptable_path)   %>"><%= link_to "Product Comparison Table", comptable_path   %></li>
+              <li class="<%= active_class(rescues_path)     %>"><%= link_to "Rescues",                  rescues_path     %></li>
+              <li class="<%= active_class(whowhy_path)      %>"><%= link_to "Who made this?",           whowhy_path      %></li>
           </ul>
       </div>
   </div>
