@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DynamicPlb</title>
+  <title><%= yield(:title) %> | Do I Need a PLB?</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
 </head>
 <body>
 
-<%= yield %>
+<!-- Loads google tag manager for analytics -->
+<%= render 'layouts/ga' %>
+
+<div class="container">
+  <%= render 'layouts/header' %>
+  <%= yield %>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="application.js"></script>
 
 </body>
 </html>

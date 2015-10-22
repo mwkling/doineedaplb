@@ -1,0 +1,71 @@
+<% provide(:title, "Satellite Networks") %>
+
+<div class="jumbotron">
+    <h2>What are all these satellite networks?</h2>
+    <p>The products on this site use 3 different satellite networks:</p>
+    <ul>
+        <li><a target="_blank" href="https://www.cospas-sarsat.int/en/">Cospas-Sarsat</a> </li>
+        <li><a target="_blank" href="https://en.wikipedia.org/wiki/Iridium_satellite_constellation">Iridium</a> </li>
+        <li><a target="_blank" href="https://en.wikipedia.org/wiki/Globalstar">Globalstar</a></li>
+    </ul>
+
+    <div class="well">
+    <h2>Cospas-Sarsat</h2>
+        <a target="_blank" href="http://www.amazon.com/gp/product/B005E1OU1A/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B005E1OU1A&linkCode=as2&tag=dinap02-20&linkId=BKXZJURCB5SQYROS"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B005E1OU1A&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=dinap02-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B005E1OU1A" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+        <a target="_blank" href="http://www.amazon.com/gp/product/B006JXY0CQ/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B006JXY0CQ&linkCode=as2&tag=dinap02-20&linkId=TS2HYUPN3GJ3NMSL"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B006JXY0CQ&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=dinap02-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B006JXY0CQ" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+        <a target="_blank" href="http://www.amazon.com/gp/product/B008M64COO/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B008M64COO&linkCode=as2&tag=dinap02-20&linkId=XN5VOLOGW4MLETND"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B008M64COO&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=dinap02-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B008M64COO" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+    <p>These three beacons use the Cospas-Sarsat network.  When you turn one on:</p>
+    <ul>
+        <li>The GPS receiver activates and tries to get your position from GPS satellites</li>
+        <br/>
+        <li>The 406 MHz beacon activates, transmitting at 5W signal into space to be received by two different types of satellites:</li>
+        <br/>
+        <ul>
+            <li>LEOSAR (low earth orbit search and rescue) satellites cover the entire globe periodically.  As soon as one is in range, it receives your signal (which includes GPS information if you have a GPS lock).  These satellites are moving, so they can use doppler shift techniques to calculate your location in a second way (in case you can't get a GPS lock).</li>
+            <br/>
+            <li>GEOSAR (geostationary search and rescue) satellites with a much higher orbit receive your signal and rebroadcast.  These have limited coverage in polar regions (>70 degrees latitude) but from the rest of the planet should always be visible.</li>
+        </ul>
+        <br/>
+        <li>Assuming you have <strong>registered</strong> your beacon, the authorities will determine who you are based on your beacon ID and begin to coordinate a rescue.</li>
+    </ul>
+
+    <p>
+    This picture (from <a href="https://commons.wikimedia.org/wiki/File:New_C-S_System_Overview.jpg">here</a>) gives a simple outline of the system:
+    <%= image_tag("cospas-sarsat.jpg", :class => "img-responsive") %>
+        <br/>
+    This satellite network has the longest track record of successful rescues (<a href="https://www.cospas-sarsat.int/en/search-and-rescue/statistics">almost 40,000 people rescued since its creation</a>).
+    It was originally set up by international agreement--that means no private ownership.  If you buy one of these beacons, make sure to register! (information will come with your beacon.  In the US, for example you will register with <a href="http://www.sarsat.noaa.gov/">NOAA</a>)
+    </p>
+    </div>
+
+    <div class="well">
+    <h2>Iridium</h2>
+        <a target="_blank" href="http://www.amazon.com/gp/product/B00BX7TJ2O/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00BX7TJ2O&linkCode=as2&tag=dinap02-20&linkId=AYCV6LGT5ENLTSZE"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00BX7TJ2O&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=dinap02-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B00BX7TJ2O" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+        <a target="_blank" href="http://www.amazon.com/gp/product/B00I6EY01C/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00I6EY01C&linkCode=as2&tag=dinap02-20&linkId=DE3FI3DLCEZTQJL4"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00I6EY01C&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=dinap02-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B00I6EY01C" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+    <p>
+        The Iridium Satellite network has 66 satellites in low earth orbit (compared to just 12 for Cospas-Sarsat).
+        These satellites orbit in a complicated series of shells, providing total coverage of all points on the globe at all times.
+        They also provide the ability to send and receive messages--features available on the two DeLorme inReach devices.
+        Of the three networks, it has the best real-time coverage.  Are there any downsides?
+    <ul>
+        <li>You'll need to pay for a subscription.</li>
+        <li>The network is privately owned.  If you call for help, the signal is first passed through the private control centers before reaching government search+rescue</li>
+        <li>Transmission power in these devices is lower (about 2W compared to 5W) than the PLBs above.  This might mean a slightly lower chance your signal gets through in the event of tree cover, storms, etc.</li>
+    </ul>
+    </p>
+    </div>
+    <div class="well">
+    <h2>Globalstar</h2>
+        <a target="_blank" href="http://www.amazon.com/gp/product/B00C8S8S4W/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00C8S8S4W&linkCode=as2&tag=dinap02-20&linkId=IBRUCOZZO7I6H3MM"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00C8S8S4W&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=dinap02-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B00C8S8S4W" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+    <p>
+        The Globalstar network has the worst coverage of the three (<a href="http://findmespot.com/coverage">see coverage map here</a>).
+        Like Iridium, it is privately owned, but does not have good coverage of the poles, parts of sub-Saharan africa, and other regions.
+        Why consider it?  It's worth a look if you know you are only traveling in areas with service and are looking for a cheaper option.
+    </p>
+    </div>
+
+    <div class="row" id="affiliate">
+        doineedaplb.com is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to amazon.com
+    </div>
+</div>
+

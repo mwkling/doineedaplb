@@ -1,0 +1,25 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+      <div class="navbar-header">
+          <!-- this is for mobile: that nice three line dropdown menu thing -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <!-- for screen readers -->
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <%= link_to "Do I Need A PLB?", root_path, :class => "navbar-brand" %>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav">
+              <li><%= link_to "Take the Quiz",            root_path        %></li>
+              <li><%= link_to "PLB Satellite Networks",   satnetworks_path %></li>
+              <li><%= link_to "Product Comparison Table", comptable_path   %></li>
+              <li><%= link_to "Rescues",                  rescues_path     %></li>
+              <li><%= link_to "Who made this?",           whowhy_path      %></li>
+          </ul>
+      </div>
+  </div>
+</nav>
+

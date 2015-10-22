@@ -1,0 +1,88 @@
+<% provide(:title, "Comparison Table") %>
+
+<div class="jumbotron">
+    <h2>Comparison Table</h2>
+
+    <p>I think you should to take the <%= link_to 'quiz', root_path %> and look through the results.  But, if you'd rather see
+    all the products next to each other in one table, I've included that here.</p>
+
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Product (click to find on Amazon)</th>
+            <th>Cost</th>
+            <th>Battery Life</th>
+            <th><%= link_to 'Satellite Network', satnetworks_path %></th>
+            <th>Annual Fee</th>
+            <th>Message Ability</th>
+            <th>Size+Weight</th>
+            <th>Floats?</th>
+        </tr>
+        <tr>
+            <td><a target="_blank" href="http://www.amazon.com/gp/product/B005E1OU1A/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B005E1OU1A&linkCode=as2&tag=dinap02-20&linkId=TGCXEKZTHURQZMZM">ACR ResQLink</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B005E1OU1A" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></td>
+            <td>$254.99</td>
+            <td>5 years or 30 hours after activation</td>
+            <td>Cospas-Sarsat</td>
+            <td>No annual fee</td>
+            <td>Very limited: see <a href="http://406link.com">406link.com</a> </td>
+            <td>4.6oz. 1.9 x 3.9 x 1.3 in</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td><a target="_blank" href="http://www.amazon.com/gp/product/B006JXY0CQ/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B006JXY0CQ&linkCode=as2&tag=dinap02-20&linkId=OZXABKS4JGUVYOUC">ACR ResQLink+</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B006JXY0CQ" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></td>
+            <td>$259.00</td>
+            <td>5 years or 30 hours after activation</td>
+            <td>Cospas-Sarsat</td>
+            <td>No annual fee</td>
+            <td>Very limited: see <a href="http://406link.com">406link.com</a> </td>
+            <td>5.4oz. 1.6 x 1.9 x 4.5 in.</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td><a target="_blank" href="http://www.amazon.com/gp/product/B008M64COO/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B008M64COO&linkCode=as2&tag=dinap02-20&linkId=DII7FFLTAINWYIIV">McMurdo FastFind 220</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B008M64COO" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></td>
+            <td>$176.00</td>
+            <td>6 years or 24 hours after activation</td>
+            <td>Cospas-Sarsat</td>
+            <td>No annual fee</td>
+            <td>None I can find</td>
+            <td>8oz, 5 x 5 x 3 in.</td>
+            <td>With included case</td>
+        </tr>
+        <tr>
+            <td><a target="_blank" href="http://www.amazon.com/gp/product/B00C8S8S4W/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00C8S8S4W&linkCode=as2&tag=dinap02-20&linkId=XIXRPJEFC47NQ7UW">SPOT 3 Satellite Messenger</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B00C8S8S4W" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></td>
+            <td>$139.95</td>
+            <td>150 hours w/tracking</td>
+            <td>Globalstar</td>
+            <td>varies, approx. $150</td>
+            <td>Send OK and SOS messages one way</td>
+            <td>4oz. 1 x 2.5 x 3.5 in.</td>
+            <td>Requires case ($20)</td>
+        </tr>
+        <tr>
+            <td><a target="_blank" href="http://www.amazon.com/gp/product/B00BX7TJ2O/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00BX7TJ2O&linkCode=as2&tag=dinap02-20&linkId=YGHR6E7RDMXYE5WX">DeLorme inReach SE</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B00BX7TJ2O" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></td>
+            <td>$295.00</td>
+            <td>100 hours w/tracking</td>
+            <td>Iridium</td>
+            <td>varies, approx $150</td>
+            <td>Full 2-way messaging</td>
+            <td>7oz, 2.4 x 1 x 5.8 inches</td>
+            <td>Requires case ($20)</td>
+        </tr>
+        <tr>
+            <td><a target="_blank" href="http://www.amazon.com/gp/product/B00I6EY01C/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00I6EY01C&linkCode=as2&tag=dinap02-20&linkId=EAW4MXEM3GY7X7RF">DeLorme inReach Explorer</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dinap02-20&l=as2&o=1&a=B00I6EY01C" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></td>
+            <td>$359.00</td>
+            <td>100 hours w/tracking</td>
+            <td>Iridium</td>
+            <td>varies, approx $150</td>
+            <td>Full 2-way messaging</td>
+            <td>7oz, 2.4 x 1 x 5.8 inches</td>
+            <td>Requires case ($20)</td>
+        </tr>
+    </table>
+    </div>
+
+    <div class="row" id="affiliate">
+        doineedaplb.com is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to amazon.com
+    </div>
+</div>
+

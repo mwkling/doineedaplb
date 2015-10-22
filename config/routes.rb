@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  root 'static_pages#home'
+  get 'whowhy'      => 'static_pages#whowhy'
+  get 'satnetworks' => 'static_pages#satnetworks'
+  get 'rescues'     => 'static_pages#rescues'
+  get 'comptable'   => 'static_pages#comptable'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

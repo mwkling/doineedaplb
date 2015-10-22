@@ -1,0 +1,58 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* Extensions of Bootstrap CSS */
+
+#quiz {
+    text-align: center;
+}
+
+/* Make long button text wrap: stackoverflow is extremely helpful */
+.btn {
+    white-space:normal;
+}
+
+dt {
+    white-space:normal;
+}
+
+.jumbotron li {
+    font-size:16px;
+}
+
+.jumbotron hr {
+    width: 100%;
+    color: black;
+    height: 1px;
+    background-color:black;
+}
+
+.aboutDevice {
+    text-align:left;
+}
+
+.deviceUnmatchList, .deviceMatchList {
+    list-style-type: none;
+}
+
+.deviceMatchList li:before {
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    content: "\e013";
+    font-family: 'Glyphicons Halflings';
+    font-size: 13px;
+    float: left;
+    margin-top: 2px;
+    margin-left: -17px;
+    color: lightgreen;
+}
+
+.deviceUnmatchList li:before {
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    content: "\e014";
+    font-family: 'Glyphicons Halflings';
+    font-size: 13px;
+    float: left;
+    margin-top: 2px;
+    margin-left: -17px;
+    color: lightcoral;
+}
