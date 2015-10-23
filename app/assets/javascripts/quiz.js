@@ -343,9 +343,10 @@ $(document).ready(function(){
 
         $.ajax({
           type: "POST",
-          url: "/submission",
-          data: q2 + "," + q3 + "," + q4 + "," + q5a + "," + q5b + "," q5c + "," q5d + "," q5e + "," q5f,
-          dataType: "html" /* response data type */
+          url: "/submissions",
+          data: { csv_response: q2  + "," + q3  + "," + q4 + "," + 
+                                q5a + "," + q5b + "," + q5c + "," + 
+                                q5d + "," + q5e + "," + q5f }
         });
 
 

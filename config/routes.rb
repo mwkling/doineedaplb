@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+#  get 'submissions/new'
+  post 'submissions' => 'submissions#create'
+
   root 'static_pages#home'
   get 'whowhy'      => 'static_pages#whowhy'
   get 'satnetworks' => 'static_pages#satnetworks'
