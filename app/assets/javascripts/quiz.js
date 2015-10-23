@@ -341,6 +341,14 @@ $(document).ready(function(){
         var q5e = +$("input[name=q5e]:checked").val();
         var q5f = +$("input[name=q5f]:checked").val();
 
+        $.ajax({
+          type: "POST",
+          url: "/submission",
+          data: q2 + "," + q3 + "," + q4 + "," + q5a + "," + q5b + "," q5c + "," q5d + "," q5e + "," q5f,
+          dataType: "html" /* response data type */
+        });
+
+
         // First, determine how strongly we think the user should get a PLB, based on first two questions.
         var recommendationHeadline = "Based on your answers, I would strongly recommend a PLB.  View your best 3 matches below:";
         if(q2 == "2" && (q3 == "4" || q3 == "5")) {
