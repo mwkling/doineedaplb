@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :records
 #  get 'submissions/new'
   post 'submissions' => 'submissions#create'
 
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
   get 'rescues'     => 'static_pages#rescues'
   get 'comptable'   => 'static_pages#comptable'
 
+  get 'reactquiz'  =>  'static_pages#reactquiz'  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

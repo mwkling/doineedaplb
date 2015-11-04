@@ -13,4 +13,7 @@ class StaticPagesController < ApplicationController
 
   def comptable
   end
+
+  def reactquiz
+  end
 end
