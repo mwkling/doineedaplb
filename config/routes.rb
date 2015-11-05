@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :questions, only: [:index]
+
   resources :records
 #  get 'submissions/new'
   post 'submissions' => 'submissions#create'
